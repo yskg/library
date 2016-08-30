@@ -1,0 +1,7 @@
+*.cs
+*.config
+*.sln
+*.suo
+*.dll
+Bin
+App_Code
