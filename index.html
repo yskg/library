@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="家谱开放数据" />
+    <meta name="keywords" content="家族,地图,家谱开放数据,族谱" />
+    <title>家谱开放数据</title>
+     <link rel="shortcut icon" type="image/x-icon" href="icon/title.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="echarts-2.2.3/build/dist/echarts-all.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loadgraph.js"></script>
+    <script type="text/javascript">
+        function init() {
+            add_graphbar();
+           //add_wordCloud();
+            add_chinamap();
+            add_tree();
+            window.onresize = function () {
+                $("body").css("width", $("#chinamap div:first-child").css("width"));
+            }
+        }
+    </script>
+
+</head>
+<body onload="init()">
+
+    <div id="headerdiv" class="headerdiv">
+        <div class="logo">
+            <span class="familytree">家谱</span>
+            <span class="knowledge">知识服务平台</span><br />
+            <span class="Genealogy">Genealogy knowledge service platform</span>
+        </div>
+        <nav class="navdiv">
+            <ul>
+                <li><a href="javascript:void(0)">首页</a></li>
+                <li><a href="#graph">统计图表</a></li>
+                <li><a href="map.html" target="_blank">家谱地图</a></li>
+                <li><a href="question.html" target="_blank">调查问卷</a></li>
+                <li><a href="knowledge.html" target="_blank">家谱知识</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="chinamap" class="chinamap">
+    </div>
+    <div id="graph" class="graphdiv">
+        <div id="bargraph" class="bargraph"></div>
+        <div id="worldcloud" class="mapgraph"></div>
+    </div>
+    <div id="section9">
+        <ul>
+            <li>
+                <div class="content">地址:上海市淮海中路1555号</div>
+            </li>
+            <li>
+                <div class="content">邮箱:service1@libnet.sh.cn</div>
+            </li>
+            <li>
+                <div class="content">常用链接:<a href="http://www.library.sh.cn/" target="_blank" style="text-decoration:none;color:white;">上海图书馆</a></div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

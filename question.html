@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="css/question.css" rel="stylesheet" />
+    <title>调查问卷</title>
+     <link rel="shortcut icon" type="image/x-icon" href="icon/title.png" />
+    <script src="js/jquery.min.js"></script>
+    <script src="echarts-2.2.3/build/dist/echarts-all.js"></script>
+    <script src="js/question.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <div class="alldiv">
+        <div id="content">
+            <p id="title">家谱平台功能调研</p>
+            <div class="overall">
+                <p>1. 您的年龄 <span class="latter">*</span></p>
+                <div class="lab">
+                    <label for="0">
+                        <input type="radio" name="age" value="0" id="0">18岁以下</label>
+                    <label for="1">
+                        <input type="radio" name="age" value="1" id="1">18-30</label>
+                    <label for="2">
+                        <input type="radio" name="age" value="2" id="2">30-40</label>
+                    <label for="3">
+                        <input type="radio" name="age" value="3" id="3">40-60</label>
+                    <label for="4">
+                        <input type="radio" name="age" value="4" id="4">60以上</label>
+                </div>
+            </div>
+            <div>
+                <p>2. 您的学历 <span class="latter">*</span></p>
+                <div class="lab">
+                    <label for="00">
+                        <input type="radio" name="education" value="0" id="00">小学</label>
+                    <label for="11">
+                        <input type="radio" name="education" value="1" id="11">初中</label>
+                    <label for="22">
+                        <input type="radio" name="education" value="2" id="22">高中</label>
+                    <label for="33">
+                        <input type="radio" name="education" value="3" id="33">大专</label>
+                    <br />
+                    <label for="44">
+                        <input type="radio" name="education" value="4" id="44">本科</label>
+                    <label for="55">
+                        <input type="radio" name="education" value="5" id="55">硕士</label>
+                    <label for="66">
+                        <input type="radio" name="education" value="6" id="66">博士</label>
+                    <label for="77">
+                        <input type="radio" name="education" value="7" id="77">博士后</label>
+                </div>
+            </div>
+            <div>
+                <span>3. 您的职业 <span class="latter">*</span></span>
+                <div class="lab">
+                    <label for="prefession">
+                        <select name="prefession" id="prefession">
+                            <option value="0">农、林、牧、渔、水利业</option>
+                            <option value="1">工业</option>
+                            <option value="2">地质普查和勘探业</option>
+                            <option value="3">建筑业</option>
+                            <option value="4">交通运输业、邮电通信业</option>
+                            <option value="5">商业、公共饮食业、物资供应和仓储业</option>
+                            <option value="6">房地产管理、公用事业、居民服务和咨询服务业</option>
+                            <option value="7">卫生、体育和社会福利事业</option>
+                            <option value="8">教育、文化艺术和广播电视业</option>
+                            <option value="9">科学研究和综合技术服务业</option>
+                            <option value="10">金融、保险业</option>
+                            <option value="11">国家机关、党政机关和社会团体</option>
+                            <option value="12">其他行业</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <p>4. 您希望从一个健全的家谱系统中获得的信息是什么？ <span class="latter">*</span> <span id="Multi">[多选]</span></p>
+                <div class="lab">
+                    <label for="t">
+                        <input id="t" type="checkbox" name="infor" value="起源时间">起源时间</label>
+                    <label for="r">
+                        <input id="r" type="checkbox" name="infor" value="先祖名人">先祖名人</label>
+                    <label for="o">
+                        <input id="o" type="checkbox" name="infor" value="奇闻趣事">奇闻趣事</label>
+                    <label for="d">
+                        <input id="d" type="checkbox" name="infor" value="发展历程">发展历程</label>
+                </div>
+            </div>
+            <div>
+                <p id="suggest">
+                    <label for="i" id="h">
+                        5. 其他想要获得的信息或者建议
+                    </label>
+                </p>
+                <textarea id="suggestion" cols="30" rows="10"></textarea>
+            </div>
+            <div id="s">
+                <input type="button" value="提交" id="submit" onclick="submit()">
+                <input type="button" value="查看" id="result" onclick="open_pie()">
+            </div>
+        </div>
+        <div id="bardiv" class="bardiv">
+            <div class="searchtitle">
+                <h4>统计分析</h4>
+                <img src="image/close_btn.png" alt="加载..." onclick="close_pie()" class="closebtn" />
+            </div>
+            <div id="piediv" class="piediv">
+            </div>
+        </div>
+        <footer>
+            谢谢您的参与！
+        </footer>
+    </div>
+</body>
+</html>

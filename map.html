@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>家谱开放数据</title>
+    <link rel="shortcut icon" type="image/x-icon" href="icon/title.png" />
+    <link rel="stylesheet" href="http://education/arcgis_js_api/library/3.13compact/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://education/arcgis_js_api/library/3.13compact/esri/css/esri.css" />
+    <link href="css/map.css" rel="stylesheet" />
+    <style type="text/css">
+        .naviarea img
+        {
+            width: 20px;
+            height: 20px;
+        }
+
+        .naviarea li
+        {
+            width: 12.5%;
+            float: left;
+            display: inline-block;
+        }
+
+        .naviarea img:hover
+        {
+            background-color: #cccccc;
+        }
+    </style>
+    <script type="text/javascript">
+        var dojoConfig = {
+            parseOnLoad: true,//用下面 parser.parse();
+            paths: {
+                extras: location.pathname.replace(/\/[^/]+$/, "") + "/extras"
+            }
+        };
+    </script>
+    <script type="text/javascript" src="http://education/arcgis_js_api/library/3.13compact/init.js"> </script>
+    <script src="echarts-2.2.3/build/dist/echarts-all.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/timelayer.js"></script>
+    <script src="js/leftitem.js"></script>
+    <script src="js/search.js"></script>
+    <script type="text/javascript">
+        function init() {
+
+
+        }
+
+    </script>
+</head>
+<body class="claro">
+    <div class="header">
+        <div class="logo">
+            <span class="familytree">家谱</span>
+            <span class="knowledge">知识服务平台</span><br />
+            <span class="Genealogy">Genealogy knowledge service platform</span>
+        </div>
+        <div class="searcharea">
+            <input id="search_text" placeholder="族谱名/族谱地/姓氏/修撰时间/先祖名人" type="text" class="searchtext" onkeydown="if (event.keyCode == 13) {search_execute(this.value);}" /><img src="image/search_btn.gif" class="searchbtn" alt="加载..." title="搜索" onclick="search_execute( dojo.byId('search_text').value)" />
+        </div>
+        <div class="lianjie">
+            <ul>
+                <li><a target="_blank" href="index.html">首页</a></li>
+                <li><a target="_blank" href="question.html">问卷调查</a></li>
+                <li><a target="_blank" href="knowledge.html">家谱知识</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="contentarea">
+        <div id="mapdiv" class="maparea">
+            <div class="naviarea">
+                <ul>
+                    <li>
+                        <img src="icon/previous.png" title="前一视图" onclick="navigation_tool('former_view')" /></li>
+                    <li>
+                        <img src="icon/next.png" title="后一视图" onclick="navigation_tool('next_view')" /></li>
+                    <li>
+                        <img src="icon/fullextent.png" title="默认范围" onclick="home_button()" />
+                    </li>
+                    <li>
+                        <img src="icon/temple.png" title="宗祠分布" onclick="open_temple()" /></li>
+                    <li>
+                        <img src="icon/search.png" title="高级查询" onclick="open_search()" /></li>
+                    <li>
+                        <img id="polygon" src="icon/polygon.png" title="多边形选择" /></li>
+                    <li>
+                        <img src="icon/timeseries.png" title="时间地图" onclick="open_time()" /></li>
+                    <li>
+                        <img src="icon/delete.png" title="清除" onclick="clear_search()" /></li>
+
+                </ul>
+            </div>
+            <div id="time_info" class="timeline">
+                <div class="searchtitle">
+                    <span>族谱修撰时间地图</span>
+                    <img src="image/close_btn.png" class="closebtn" alt="加载..." onclick="close_timeline()" />
+                </div>
+                <div style="text-align: center; font-size: 13px;">当前时间:<span id="date_range">1500年</span></div>
+                <div id="time_slider" class="timelinearea">
+                </div>
+            </div>
+            <div id="searchperson" class="searchperson">
+                <label>姓&nbsp;&nbsp;&nbsp;&nbsp;氏</label><input id="fname" type="text" placeholder="输入姓氏" />&nbsp;
+                <label>先祖名人</label><input id="fperson" type="text" placeholder="输入先祖名人" />&nbsp;<br />
+                <label>谱籍地</label><input id="faddress" type="text" placeholder="输入族谱地" />
+                &nbsp;
+                <label>修撰时间</label><input id="ftime" type="text" placeholder="输入修撰时间" /><br />
+                <input id="Button1" type="button" value="搜索" onclick="hsearch()" style="font-size:20px;" />
+            </div>
+            <!--搜索结果区域-->
+            <div id="search_results" class="searchresult">
+                <div class="resulttitle">
+                    <div id="rnumber" class="rnumber">查询结果</div>
+                    <img src="image/close_btn.png" class="closebtn" alt="加载..." onclick="clear_search()" />
+                </div>
+                <div id="search_items" class="itemgroup">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
