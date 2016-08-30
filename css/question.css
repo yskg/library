@@ -1,0 +1,171 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #C8C8C8 url(../image/flower.jpg) 1280px 987px;
+    font-family: "Helvetica", "Arial", "微软雅黑", "STHeiti", "Microsoft YaHei";
+ 
+}
+
+.alldiv
+{
+    margin: 10px auto;
+    width: 980px;
+    height: 920px;
+    background-color: white;
+    border: 1px #CCCCCC solid;
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+
+
+
+#title
+{
+    margin-top: 20px;
+    padding-top: 30px;
+    color: #E64E23;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#content div
+{
+    margin-top: 40px;
+    padding-left: 30px;
+    font-size: 1em;
+    background-color: white;
+    /*text-align:center;*/
+}
+
+label
+{
+    margin: 40px;
+    font-size: 1em;
+    color: #4E555A;
+}
+
+    label:hover
+    {
+        background: #E7E7FE;
+    }
+
+.lab
+{
+    margin-top: 20px;
+}
+
+.latter
+{
+    color: red;
+    font-family: "黑体";
+}
+
+p, span
+{
+    padding-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #4E555A;
+}
+
+#suggest
+{
+    display: inline;
+}
+
+#h
+{
+    margin: 0;
+    padding: 0;
+}
+
+    #h:hover
+    {
+        background-color: white;
+    }
+
+#Multi
+{
+    color: #227EFF;
+}
+
+textarea
+{
+    vertical-align: top;
+    width: 500px;
+    border: 1px #cccccc solid;
+}
+
+#s
+{
+    text-align: center;
+}
+
+#submit, #result
+{
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    color: White;
+    background-color: #EF8734;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 7px;
+    text-shadow: 1px 1px 0px #b67f01; /*字体阴影效果*/
+    font-family: "Microsoft Yahei";
+}
+
+#line
+{
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.bardiv
+{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 180px;
+    left: 160px;
+    display: none;
+    border: 1px solid #2298D3 ;
+    background-color: white;
+}
+.searchtitle{
+	background-color: #2298d3;
+	height: 28px;
+	line-height: 28px;
+	overflow: hidden;
+
+}
+.searchtitle h4{
+	color: #fff;
+	font-size: 0.87em;
+	font-weight: normal;
+	float: left;
+}
+.closebtn{
+	float: right;
+	margin-top: 5px;
+    cursor:pointer;
+}
+.piediv
+{
+    width: 600px;
+    height: 570px;
+}
+
+footer
+{
+    text-align: center;
+    font-size: 0.75em;
+    color: #777979;
+    line-height:30px;
+    height:40px;
+}

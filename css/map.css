@@ -1,0 +1,268 @@
+﻿*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", "Arial", "微软雅黑", "STHeiti", "Microsoft YaHei";
+    position: relative;
+    min-width: 1250px;
+    min-height: 600px;
+}
+
+.header
+{
+    height: 12%;
+    width: 100%;
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #82c4e5;
+    overflow: hidden;
+}
+.logo{
+    margin-top:3px;
+    margin-left:50px;
+    float:left;
+}
+.familytree{
+    font-size:3.1em;/*50px*/
+    font-weight:bold;
+    font-family:"隶书";
+}
+.knowledge{
+    font-size:1.37em;/*22px*/
+    font-weight:bold;
+    font-family:"隶书";
+}
+.Genealogy{
+    padding:0;
+    padding-left:0.003%;
+    letter-spacing:1px;
+    font-size:0.75em;/*12px*/
+    color:green;
+}
+.lianjie
+{
+    position: absolute;
+    width: 330px;
+    right: 10px;
+    top: 20px;
+    font-size: 0.87em;
+}
+.lianjie li{
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+    font-family: "微软雅黑", Veranda;
+    width: 25%;
+    text-align: center;
+   
+}
+
+.lianjie li:hover{
+    border-bottom: 4px #E74F4D solid;
+}
+
+.lianjie li a{
+    color: #787A82;
+    text-decoration:none;
+}
+
+.lianjie li a:hover{
+    color: #E74F4D;
+}
+
+.searcharea
+{
+    background-color: #FFF;
+    border: 1px solid #0f5f87;
+    padding: 5px;
+    width: 330px;
+    position: absolute;
+    left: 400px;
+    top: 30%;
+    overflow: hidden;
+}
+
+.searchtext
+{
+    float: left;
+    height: 26px;
+    width: 290px;
+    border: 0;
+    font-size: 1em;
+}
+
+.searchbtn
+{
+    float: left;
+}
+
+.searchresult
+{
+    background-color: #FFF;
+    width: 350px;
+    border: 1px solid #2298d3;
+    overflow: hidden;
+    position: absolute;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    bottom: 14px;
+    right: 2px;
+    z-index: 999;
+    display: none;
+}
+
+.resulttitle
+{
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #2298d3;
+    height: 28px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.rnumber
+{
+    color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    float: left;
+}
+
+.itemgroup
+{
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    line-height: 28px;
+    overflow-y: auto;
+    height: 220px;
+}
+
+.itemname
+{
+    font-size: 0.75em;
+    color: #1a6cdc;
+}
+
+.itemgroup:hover
+{
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.contentarea
+{
+    width: 100%;
+    height: 88%;
+    position: relative;
+}
+
+.maparea
+{
+    height: 100%;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.naviarea
+{
+    box-shadow: 0 0 0.75em #777777;
+    border-radius: 10px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+    z-index: 999;
+    width: 290px;
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    padding-top: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+.searchperson
+{
+    position: absolute;
+    width: 550px;
+    height: 80px;
+    z-index: 999;
+    top: 80px;
+    left:60px;
+    display:none;
+    font-size:1.25em;
+}
+
+.timeline
+{
+    background-color: #FFF;
+    width: 820px;
+    height: 80px;
+    border: 1px solid #2298d3;
+    overflow: hidden;
+    position: absolute;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    bottom: 14px;
+    left: 20%;
+    z-index: 999;
+    display:none;
+}
+
+.searchtitle
+{
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #2298d3;
+    height: 22px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+    .searchtitle span
+    {
+        color: #fff;
+        font-size: 1em;
+        font-weight: normal;
+        float: left;
+    }
+
+.closebtn
+{
+    float: right;
+    margin-top: 5px;
+}
+
+.timelinearea
+{
+    width: 100%;
+    height: 46px;
+    overflow: hidden;
+}
